@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 URL Shortener Microservice 
+  br
+  p.red Example Usage
+  code rp-short.herokuapp.com/new/https://www.google.com/
+  p.red Expect Output is JSON
+  code {"original": "https://www.google.com/", "short": "rp-short.herokuapp.com/1234567890"}
+  br 
+  br
+  p.small Use the short property to access the shorted url.
