@@ -47,7 +47,7 @@ router.get("/use/:short", function(req, res, next) {
 		var db = client.db("short");
 		db.collection("short").findOne({ generate : req.params.short }, function(err, result) {
 			if (err) throw err;
-			if (result.original.slice(0,7)=="http://") {
+			if (result.original.slice(0,7)=="http://"||result.original.slice(0,8)=="https://") {
 				res.redirect(result.original);
 			}
 			else {
